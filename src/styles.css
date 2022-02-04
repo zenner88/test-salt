@@ -2,3 +2,17 @@
 body {
     background-color: #953e45;
 }
+hr {
+    color: #f4e3cf;
+    margin-top: 10px;
+    border: none;
+    border-top: 2px solid;
+    margin-bottom: 5px;
+}
+.tcolor{
+    color: #f4e3cf;
+}
+.tdetails{
+    font-size: 9pt;
+    vertical-align: text-bottom;
+}
