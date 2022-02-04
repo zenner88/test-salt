@@ -1,0 +1,49 @@
+<div class="container">
+<!-- NAVBAR  -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">SocialNetwork</a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+        <form class="d-flex">
+        <input
+            class="form-control me-4"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">
+            Search
+        </button>
+        </form>
+        <button class="btn btn-outline-success" type="submit">
+            Upload
+        </button>
+    </div>
+    </div>
+</nav>
+<!-- END NAVBAR  -->
+<hr />
+<p>
+    <a routerLink="videos">Videos</a>  / 
+    <a routerLink="people" style="padding-left: 20px;">People</a> / 
+    <a routerLink="documents" style="padding-left: 20px;">Documents</a> / 
+    <a routerLink="events" style="padding-left: 20px;">Events</a> / 
+    <a routerLink="communities" style="padding-left: 20px;">Communities</a> / 
+    <a routerLink="favorites" style="padding-left: 20px;">Favorites</a> /
+    <a routerLink="channels" style="padding-left: 20px;">Channels</a> 
+    
+</p>
+<hr />
+</div>
+<router-outlet></router-outlet>
