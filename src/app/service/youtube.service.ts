@@ -18,4 +18,13 @@ export class YoutubeService {
   mainVideo(){
     return this.getAPI.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=1&regionCode=ES&key=AIzaSyAk24B09Xz_hCv1NXtAemkU_yKnIaTBJrU");
   }
+
+  popularVideoMY(){
+    return this.getAPI.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=1&regionCode=MY&key=AIzaSyAk24B09Xz_hCv1NXtAemkU_yKnIaTBJrU");
+  }
+
+  popularVideoMY2(){
+    return this.getAPI.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=2&regionCode=MY&key=AIzaSyAk24B09Xz_hCv1NXtAemkU_yKnIaTBJrU");
+  }
+
 }

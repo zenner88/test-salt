@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
   posts: any;
   postz: any;
   postx: any;
+  posty: any;
+  posty2: any;
 
   constructor(private getAPI : YoutubeService) {
     getAPI.popularVideoID().subscribe(data=>
@@ -22,6 +24,13 @@ export class HomeComponent implements OnInit {
 
     getAPI.mainVideo().subscribe(data=>
       this.postx = data
+      );
+
+    getAPI.popularVideoMY().subscribe(data=>
+      this.posty = data
+      );
+    getAPI.popularVideoMY2().subscribe(data=>
+      this.posty2 = data
       );
   }
   ngOnInit(): void {  
