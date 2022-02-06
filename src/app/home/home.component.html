@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row mt-4">
         <div class="col-lg-8 col-md-12 px-3">
+          <!-- VIDEOS  -->
             <div class="row">
                 <div class="col-12">
                     <div class="row tcolor">
@@ -11,61 +12,53 @@
                     <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-md-8 mb-3 px-3">
-                                <div class="card">
-                                <img src="..." class="card-img-top" alt="..." height="360px">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="col-md-8 mb-1 px-1" *ngFor="let posx of postx.items">
+                              <div class="card">
+                                <img src="{{ posx.snippet.thumbnails.medium.url}}" class="card-img-top" alt="" height="280px">
+                                <div class="card-body px-2 pb-2">
+                                  <p class="tjudul">{{ posx.snippet.title}}</p>
+                                  <div class="row">
+                                    <div class="col-6"><p class="card-text tdetails">{{ posx.snippet.channelTitle}}</p></div>
+                                    <div class="col-6"><p class="card-text tdetails text-end">{{ posx.statistics.viewCount}} views</p></div>
+                                  </div>
                                 </div>
-                                </div>
+                              </div>
                             </div>
                             <div class="col-lg-4 px-3">
-                                <div class="row">
-                                    <div class="card mb-2">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        </div>
+                              <div class="col pb-2" *ngFor="let posz of postz.items">
+                                <div class="card">
+                                  <img src="{{ posz.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                                  <div class="card-body px-2 pb-2">
+                                    <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                    <div class="row">
+                                      <div class="col-6"><p class="card-text tdetails">{{ posz.snippet.channelTitle}}</p></div>
+                                      <div class="col-6"><p class="card-text tdetails text-end">{{ posz.statistics.viewCount}} views</p></div>
                                     </div>
-                                    <div class="card mb-2">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                          <h5 class="card-title">Card title</h5>
-                                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                        </div>
-                                    </div>                                    
+                                  </div>
                                 </div>
+                              </div>
                             </div>
                         </div> 
                         <div class="row">
-                            <div class="row row-cols-1 row-cols-md-3 g-2">
-                                <div class="col">
+                            <div class="row row-cols-1 row-cols-md-3 g-2" >
+                                <div class="col" *ngFor="let post of posts.items">
                                   <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                    <img src="{{ post.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                                    <div class="card-body px-2 pb-2">
+                                      <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                      <div class="row">
+                                        <div class="col-6"><p class="card-text tdetails">{{ post.snippet.channelTitle}}</p></div>
+                                        <div class="col-6"><p class="card-text tdetails text-end">{{ post.statistics.viewCount}} views</p></div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col">
-                                  <div class="card">
-                                    <img src="..." class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                      <h5 class="card-title">Card title</h5>
-                                      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                                    </div>
+                                <div class="card">
+                                  <div class="card-body px-2 pb-2">
+                                    <p class="tjudul">Upload
+                                      Your Own Video
+                                    </p>
+                                    <p class="tjudul"></p>
                                   </div>
                                 </div>
                               </div>
@@ -74,6 +67,139 @@
                     </div>
                 </div>
             </div>
+            <!-- People  -->
+            <div class="row mt-5">
+              <div class="col-12">
+                  <div class="row tcolor">
+                      <div class="col-4"><h5>People</h5></div>
+                      <div class="col-4 text-end"><p class="tdetails">View all</p></div>
+                      <div class="col-4 text-end"></div>
+                  </div>
+                  <div class="row">
+                  <div class="col-12">
+                      <div class="row">
+                          <div class="col-md-8 mb-1 px-1" *ngFor="let posx of postx.items">
+                            <div class="card">
+                              <img src="{{ posx.snippet.thumbnails.medium.url}}" class="card-img-top" alt="" height="280px">
+                              <div class="card-body px-2 pb-2">
+                                <p class="tjudul">{{ posx.snippet.title}}</p>
+                                <div class="row">
+                                  <div class="col-6"><p class="card-text tdetails">{{ posx.snippet.channelTitle}}</p></div>
+                                  <div class="col-6"><p class="card-text tdetails text-end">{{ posx.statistics.viewCount}} views</p></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 px-3">
+                            <div class="col pb-2" *ngFor="let posz of postz.items">
+                              <div class="card">
+                                <img src="{{ posz.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                                <div class="card-body px-2 pb-2">
+                                  <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                  <div class="row">
+                                    <div class="col-6"><p class="card-text tdetails">{{ posz.snippet.channelTitle}}</p></div>
+                                    <div class="col-6"><p class="card-text tdetails text-end">{{ posz.statistics.viewCount}} views</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div> 
+                      <div class="row">
+                          <div class="row row-cols-1 row-cols-md-3 g-2" >
+                              <div class="col" *ngFor="let post of posts.items">
+                                <div class="card">
+                                  <img src="{{ post.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                                  <div class="card-body px-2 pb-2">
+                                    <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                    <div class="row">
+                                      <div class="col-6"><p class="card-text tdetails">{{ post.snippet.channelTitle}}</p></div>
+                                      <div class="col-6"><p class="card-text tdetails text-end">{{ post.statistics.viewCount}} views</p></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card">
+                                <div class="card-body px-2 pb-2">
+                                  <p class="tjudul">Show
+                                    Your work
+                                  </p>
+                                  <p class="tjudul"></p>
+                                </div>
+                              </div>
+                            </div>
+                      </div> 
+                  </div>
+                  </div>
+              </div>
+          </div>
+          <!-- documents -->
+          <div class="row mt-5 mb-5">
+            <div class="col-12">
+                <div class="row tcolor">
+                    <div class="col-4"><h5>Documents</h5></div>
+                    <div class="col-4 text-end"><p class="tdetails">Browse all documents</p></div>
+                    <div class="col-4 text-end"></div>
+                </div>
+                <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-md-8 mb-1 px-1" *ngFor="let posx of postx.items">
+                          <div class="card">
+                            <img src="{{ posx.snippet.thumbnails.medium.url}}" class="card-img-top" alt="" height="280px">
+                            <div class="card-body px-2 pb-2">
+                              <p class="tjudul">{{ posx.snippet.title}}</p>
+                              <div class="row">
+                                <div class="col-6"><p class="card-text tdetails">{{ posx.snippet.channelTitle}}</p></div>
+                                <div class="col-6"><p class="card-text tdetails text-end">{{ posx.statistics.viewCount}} views</p></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 px-3">
+                          <div class="col pb-2" *ngFor="let posz of postz.items">
+                            <div class="card">
+                              <img src="{{ posz.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                              <div class="card-body px-2 pb-2">
+                                <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                <div class="row">
+                                  <div class="col-6"><p class="card-text tdetails">{{ posz.snippet.channelTitle}}</p></div>
+                                  <div class="col-6"><p class="card-text tdetails text-end">{{ posz.statistics.viewCount}} views</p></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div> 
+                    <div class="row">
+                        <div class="row row-cols-1 row-cols-md-3 g-2" >
+                            <div class="col" *ngFor="let post of posts.items">
+                              <div class="card">
+                                <img src="{{ post.snippet.thumbnails.medium.url}}" class="card-img-top" alt="">
+                                <div class="card-body px-2 pb-2">
+                                  <!-- <p class="tjudul">{{ post.snippet.title}}</p> -->
+                                  <div class="row">
+                                    <div class="col-6"><p class="card-text tdetails">{{ post.snippet.channelTitle}}</p></div>
+                                    <div class="col-6"><p class="card-text tdetails text-end">{{ post.statistics.viewCount}} views</p></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card">
+                              <div class="card-body px-2 pb-2">
+                                <p class="tjudul">Share
+                                  Your Documents
+                                </p>
+                                <p class="tjudul"></p>
+                              </div>
+                            </div>
+                          </div>
+                    </div> 
+                </div>
+                </div>
+            </div>
+        </div>
+
         </div>
         <div class="col-lg-4 col-md-12   px-3">
             <div class="row tcolor">
@@ -86,27 +212,13 @@
                     <div class="card mb-3" style="max-width: 540px;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
+                        <img src="" class="img-fluid rounded-start" alt="">
                         </div>
                         <div class="col-md-8">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                        <img src="..." class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text tdetails"><b>Card title</b>
+                            This is a wider card with supporting text below as a natural</p>
+                            <p class="card-text tdetails"><small class="text-muted mt-1">Last updated 3 mins ago</small></p>
                         </div>
                         </div>
                     </div>
@@ -124,37 +236,37 @@
                 <div class="row row-cols-1 row-cols-md-2 g-2">
                     <div class="col">
                       <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="" class="card-img-top" alt="">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text tdetails">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="" class="card-img-top" alt="">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text tdetails">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="" class="card-img-top" alt="">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                          <p class="card-text tdetails">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
                         </div>
                       </div>
                     </div>
                     <div class="col">
                       <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="" class="card-img-top" alt="">
                         <div class="card-body">
                           <h5 class="card-title">Card title</h5>
-                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text tdetails">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                       </div>
                     </div>

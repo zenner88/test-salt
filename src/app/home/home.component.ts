@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { YoutubeService } from '../service/youtube.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  posts: any;
+  postz: any;
+  postx: any;
 
-  constructor() { }
+  constructor(private getAPI : YoutubeService) {
+    getAPI.popularVideoID().subscribe(data=>
+      this.posts = data
+      );
 
-  ngOnInit(): void {
+    getAPI.popularVideoUS().subscribe(data=>
+      this.postz = data
+      );
+
+    getAPI.mainVideo().subscribe(data=>
+      this.postx = data
+      );
+  }
+  ngOnInit(): void {  
   }
 
 }
+
+

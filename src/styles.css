@@ -14,5 +14,8 @@ hr {
 }
 .tdetails{
     font-size: 9pt;
-    vertical-align: text-bottom;
+}
+.tjudul{
+    font-size: 11pt;
+    text-size-adjust: 2;
 }

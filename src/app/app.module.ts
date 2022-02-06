@@ -14,6 +14,7 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ChannelsComponent } from './channels/channels.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,11 +28,12 @@ import { HomeComponent } from './home/home.component';
     CommunitiesComponent,
     FavoritesComponent,
     ChannelsComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,   
+    HttpClientModule,
   ],
   providers: [
     {provide: APP_BASE_HREF, useValue: ''}
