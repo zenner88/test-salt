@@ -15,6 +15,7 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { ChannelsComponent } from './channels/channels.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule  } from '@angular/common/http';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule  } from '@angular/common/http';
     FavoritesComponent,
     ChannelsComponent,
     HomeComponent,
+    SafeHtmlPipe,
   ],
   imports: [
     BrowserModule,

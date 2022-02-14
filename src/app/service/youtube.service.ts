@@ -16,7 +16,7 @@ export class YoutubeService {
   }
 
   mainVideo(){
-    return this.getAPI.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=1&regionCode=ES&key=AIzaSyAk24B09Xz_hCv1NXtAemkU_yKnIaTBJrU");
+    return this.getAPI.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics%2C%20player&chart=mostPopular&maxHeight=257&maxResults=5&regionCode=ID&key=AIzaSyAk24B09Xz_hCv1NXtAemkU_yKnIaTBJrU");
   }
 
   popularVideoMY(){

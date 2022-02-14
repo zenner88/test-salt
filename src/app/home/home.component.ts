@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     getAPI.popularVideoID().subscribe(data=>
       this.posts = data
       );
+      console.log(this.posts) 
 
     getAPI.popularVideoUS().subscribe(data=>
       this.postz = data
@@ -25,10 +26,12 @@ export class HomeComponent implements OnInit {
     getAPI.mainVideo().subscribe(data=>
       this.postx = data
       );
+      console.log(this.postx) 
 
     getAPI.popularVideoMY().subscribe(data=>
       this.posty = data
       );
+      
     getAPI.popularVideoMY2().subscribe(data=>
       this.posty2 = data
       );

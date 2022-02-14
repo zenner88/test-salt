@@ -2,6 +2,11 @@
 body {
     background-color: #953e45;
 }
+a {
+    color: #f4e3cf;
+    text-decoration: none;
+    margin-right: 20px;
+}
 hr {
     color: #f4e3cf;
     margin-top: 10px;
